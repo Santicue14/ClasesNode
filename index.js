@@ -99,8 +99,13 @@ class Maquina{
         var diasSuperados = this.#diasDeProduccion.filter(dia => dia>primerDia)
         console.log(diasSuperados)
     }
+    mostrarPorDia(){
+        this.#diasDeProduccion.forEach(
+            (produccion,index) => console.log(`Día ${index+1}: ${produccion}`) 
+        )
+    }
 }
 
 
 const miMaquina = new Maquina()
-miMaquina.cantidadProduccionesMayorALaPrimera()
+miMaquina.mostrarPorDia()
